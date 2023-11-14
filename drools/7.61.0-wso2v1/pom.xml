@@ -71,40 +71,65 @@
 <!--            <version>${drool.version}</version>-->
 <!--            <optional>true</optional>-->
 <!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-core</artifactId>-->
+<!--            <version>${drool.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-compiler</artifactId>-->
+<!--            <version>${drool.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-engine</artifactId>-->
+<!--            <version>${drool.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-compatibility</artifactId>-->
+<!--            <version>${drool.version}</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-engine-classic</artifactId>
+            <version>${drool.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.drools</groupId>
             <artifactId>drools-core</artifactId>
             <version>${drool.version}</version>
-            <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-compiler</artifactId>
-            <version>${drool.version}</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-engine</artifactId>
-            <version>${drool.version}</version>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.drools</groupId>-->
-<!--            <artifactId>drools-engine-classic</artifactId>-->
-<!--            <version>${drool.version}</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.kie</groupId>
             <artifactId>kie-api</artifactId>
             <version>${drool.version}</version>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.kie</groupId>
-            <artifactId>kie-internal</artifactId>
+            <artifactId>kie-ci</artifactId>
             <version>${drool.version}</version>
-            <optional>true</optional>
         </dependency>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.kie.soup/kie-soup-maven-support &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.kie.soup</groupId>-->
+<!--            <artifactId>kie-soup-maven-support</artifactId>-->
+<!--            <version>${drool.version}</version>-->
+<!--        </dependency>-->
+
+        <!--        <dependency>-->
+<!--            <groupId>org.kie</groupId>-->
+<!--            <artifactId>kie-api</artifactId>-->
+<!--            <version>${drool.version}</version>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.kie</groupId>-->
+<!--            <artifactId>kie-internal</artifactId>-->
+<!--            <version>${drool.version}</version>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
 
     </dependencies>
 
@@ -131,10 +156,10 @@
                             !org.kie.*
                         </Import-Package>
                         <Embed-Dependency>
-                            drools-core;drools-compiler;kie-api;kie-internal;scope=compile|runtime;inline=true;
+                            drools-core;drools-engine-classic;kie-api;kie-ci;scope=compile|runtime;inline=true;
                         </Embed-Dependency>
                         <Include-Resource>
-                            META-INF/drools.default.packagebuilder.conf=META-INF/drools.default.packagebuilder.conf
+                            META-INF=META-INF
                         </Include-Resource>
                         <DynamicImport-Package>*</DynamicImport-Package>
                     </instructions>
