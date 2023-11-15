@@ -111,6 +111,16 @@
             <artifactId>kie-ci</artifactId>
             <version>${drool.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.kie.soup</groupId>
+            <artifactId>kie-soup-maven-integration</artifactId>
+            <version>${drool.version}</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.kie.appformer</groupId>-->
+<!--            <artifactId>appformer-js</artifactId>-->
+<!--            &lt;!&ndash; No need to specify version, it's managed by BOM &ndash;&gt;-->
+<!--        </dependency>-->
 <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.kie.soup/kie-soup-maven-support &ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>org.kie.soup</groupId>-->
@@ -132,6 +142,17 @@
 <!--        </dependency>-->
 
     </dependencies>
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>org.kie</groupId>-->
+<!--                <artifactId>kie-platform-bom</artifactId>-->
+<!--                <version>${drool.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
 
     <properties>
         <drool.version>7.61.0.Final</drool.version>
@@ -148,7 +169,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Export-Package>
-                            org.drools.*;org.kie.*;version="${project.version}";-split-package:=merge-first
+                            org.appformer.*;org.drools.*;org.kie.*;version="${project.version}";-split-package:=merge-first
                         </Export-Package>
                         <Private-Package></Private-Package>
                         <Import-Package>
@@ -156,7 +177,7 @@
                             !org.kie.*
                         </Import-Package>
                         <Embed-Dependency>
-                            drools-core;drools-engine-classic;kie-api;kie-ci;scope=compile|runtime;inline=true;
+                            kie-soup-maven-integration;drools-core;drools-engine-classic;kie-api;kie-ci;scope=compile|runtime;inline=true;
                         </Embed-Dependency>
                         <Include-Resource>
                             META-INF=META-INF
