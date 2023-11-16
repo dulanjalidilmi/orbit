@@ -91,9 +91,14 @@
 <!--            <artifactId>drools-compatibility</artifactId>-->
 <!--            <version>${drool.version}</version>-->
 <!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-engine-classic</artifactId>-->
+<!--            <version>${drool.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.drools</groupId>
-            <artifactId>drools-engine-classic</artifactId>
+            <artifactId>drools-engine</artifactId>
             <version>${drool.version}</version>
         </dependency>
         <dependency>
@@ -177,7 +182,7 @@
                             !org.kie.*
                         </Import-Package>
                         <Embed-Dependency>
-                            kie-soup-maven-integration;drools-core;drools-engine-classic;kie-api;kie-ci;scope=compile|runtime;inline=true;
+                            kie-soup-maven-integration;drools-core;drools-engine;kie-api;kie-ci;scope=compile|runtime;inline=true;
                         </Embed-Dependency>
                         <Include-Resource>
                             META-INF=META-INF
